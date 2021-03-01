@@ -1,0 +1,15 @@
+const app =  require('./src/app');
+const http = require('http');
+const { debug } = require('console');
+
+// configurar puerto
+const port = process.env.PORT || '3030'
+app.set('port', port);
+
+// Crear servidor HTTP
+const server = http.createServer(app);
+
+server.listen(port);
+server.on('listening', () => {
+  debug('Server UP on port 3030')
+})

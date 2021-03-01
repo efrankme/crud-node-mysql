@@ -1,0 +1,23 @@
+
+{{#if mensaje}}
+  <div class="notification is-success">{{ mensaje }}</div>
+{{/if}}
+
+  <h2 class="title">Agregar producto</h2>
+  <form class="forma" method="POST" enctype="multipart/form-data">
+    <div class="field">
+      <input type="text" class="input" name="nombre" placeholder="Nombre" required>
+    </div>
+    <div class="field">
+      <input type="text" class="input" name="precio" placeholder="Precio" required>
+    </div>
+    <div class="field">
+      <input type="text" class="input" name="codigo" placeholder="Codigo" maxlength="5" required>
+    </div>
+    <div class="field">
+      <input type="file" name="pic" accept="image/*" required>
+    </div>
+    <div class="field">
+      <button class="button is-link">Crear Producto</button>
+    </div>
+  </form>
